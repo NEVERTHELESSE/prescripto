@@ -1,0 +1,54 @@
+#special {
+  animation: rolling;
+  animation-timeline: view();
+}
+#special:first-child {
+  background: orange;
+}
+#special:nth-child(2) {
+  background: blue;
+}
+
+#doctor1 {
+  animation: rolling alternate 1s;
+}
+#doctor1:nth-child(2) {
+  animation: rolling alternate 2s;
+}
+#doctor1:nth-child(3) {
+  animation: rolling alternate 3s;
+}
+#doctor1:last-child {
+  animation: rolling alternate 6s;
+}
+
+@keyframes rolling {
+  from {
+    transform: translateX(-50rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0rem);
+    opacity: 1;
+  }
+}
+#hospital {
+}
+#topDoctor {
+  animation: hospital;
+  animation-timeline: view();
+  animation-range: entry 0;
+}
+
+@keyframes hospital {
+  from {
+    opacity: 0.5;
+    transform: translateY(5rem);
+    transform: scale(0.7);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+    transform: scale(1);
+  }
+}

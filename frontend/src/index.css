@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+.dark {
+  --bgcolor: #1c1c1d;
+  --fgcolor: rgb(212, 212, 212);
+  --coverColor: #3a3b3c;
+  --primaryColor: #0350b5;
+  --secondaryColor: #013d8b;
+  --hoverCoverColor: #aeb1b6;
+  --overColor: #242526;
+}
+
+.light {
+  --bgcolor: #ececee;
+  --coverColor: #e4e5e9;
+  --primaryColor: #0865ff;
+  --hoverCoverColor: #868688;
+  --overColor: #ffffff;
+  --fgcolor: rgb(29, 23, 23);
+}
+body {
+  background: var(--bgcolor);
+  font-family: sans-serif;
+  color: var(--fgcolor);
+  overflow-x: hidden;
+  transition: all ease 0.6s;
+}
+
+/* ::-webkit-scrollbar {
+  background: var(--hoverCoverColor);
+}
+
+::-webkit-scrollbar-button {
+  background: purple;
+} */
+
+::-webkit-scrollbar-thumb {
+  background: var(--primaryColor);
+  border-radius: 2rem;
+}
+
+::-webkit-scrollbar {
+  background: var(--coverColor);
+  width: 10px;
+}
+
+header {
+  background: rgba(51, 0, 192, 0.068);
+  backdrop-filter: blur(30px);
+}
